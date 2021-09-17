@@ -5,7 +5,7 @@
 ## Add the Fluent Helm repository
 
 ```sh
-helm repo add fluent https://fluent.github.io/helm-charts
+helm repo add fluent https://skyward-luke.github.io/helm-charts
 ```
 
 ## Install Fluentd
@@ -14,7 +14,7 @@ helm repo add fluent https://fluent.github.io/helm-charts
 helm upgrade -i fluentd fluent/fluentd
 ```
 
-For more details on installing FluentD please see the [chart's README](https://github.com/fluent/helm-charts/tree/master/charts/fluentd).
+For more details on installing FluentD please see the [chart's README](https://github.com/skyward-luke/helm-charts/tree/master/charts/fluentd).
 
 ## Install Fluent Bit
 
@@ -22,7 +22,7 @@ For more details on installing FluentD please see the [chart's README](https://g
 helm upgrade -i fluent-bit fluent/fluent-bit
 ```
 
-For more details on installing Fluent Bit please see the [chart's README](https://github.com/fluent/helm-charts/tree/master/charts/fluent-bit).
+For more details on installing Fluent Bit please see the [chart's README](https://github.com/skyward-luke/helm-charts/tree/master/charts/fluent-bit).
 
 ## License
 
