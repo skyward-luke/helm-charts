@@ -49,9 +49,13 @@ securityContext: {}
 # Configure the livessProbe
 # Ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 livenessProbe:
-  httpGet:
-    path: /metrics
-    port: metrics
+  exec:
+    command:
+    - "/bin/sh"
+    - "-c"
+    - "[[ $( pgrep ruby | wc -l)  == 2 ]]"
+  initialDelaySeconds: 60
+  periodSeconds: 20
   # initialDelaySeconds: 0
   # periodSeconds: 10
   # timeoutSeconds: 1
@@ -60,10 +64,15 @@ livenessProbe:
 
 # Configure the readinessProbe
 # Ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+
 readinessProbe:
-  httpGet:
-    path: /metrics
-    port: metrics
+  exec:
+    command:
+    - "/bin/sh"
+    - "-c"
+    - "[[ $( pgrep ruby | wc -l)  == 2 ]]"
+  initialDelaySeconds: 30
+  periodSeconds: 20
   # initialDelaySeconds: 0
   # periodSeconds: 10
   # timeoutSeconds: 1
