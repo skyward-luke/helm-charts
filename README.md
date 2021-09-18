@@ -13,7 +13,7 @@ Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
 Once Helm is set up properly, add the repo as follows:
 
 ```sh
-helm repo add fluent https://fluent.github.io/helm-charts
+helm repo add fluent https://skyward-luke.github.io/helm-charts
 ```
 
 You can then run `helm search repo fluent` to see the charts.
