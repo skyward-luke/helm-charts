@@ -7,7 +7,7 @@
 To add the `fluent` helm repo, run:
 
 ```sh
-helm repo add fluent https://fluent.github.io/helm-charts
+helm repo add fluent https://skyward-luke.github.io/helm-charts
 helm repo update
 ```
 
