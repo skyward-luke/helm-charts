@@ -24,12 +24,6 @@ serviceAccount:
 rbac:
   create: true
 
-# Configure podsecuritypolicy
-# Ref: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-podSecurityPolicy:
-  enabled: true
-  annotations: {}
-
 ## Security Context policies for controller pods
 ## See https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/ for
 ## notes on enabling and using sysctls
@@ -53,7 +47,7 @@ livenessProbe:
     command:
     - "/bin/sh"
     - "-c"
-    - "[[ $( pgrep ruby | wc -l)  == 2 ]]"
+    - "[ $( pgrep ruby | wc -l ) = 2 ]"
   initialDelaySeconds: 60
   periodSeconds: 20
   # initialDelaySeconds: 0
@@ -70,7 +64,7 @@ readinessProbe:
     command:
     - "/bin/sh"
     - "-c"
-    - "[[ $( pgrep ruby | wc -l)  == 2 ]]"
+    - "[ $( pgrep ruby | wc -l ) = 2 ]"
   initialDelaySeconds: 30
   periodSeconds: 20
   # initialDelaySeconds: 0

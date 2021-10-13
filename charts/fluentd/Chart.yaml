@@ -2,7 +2,7 @@ apiVersion: v2
 name: fluentd
 description: A Helm chart for fluent
 # type: application
-version: 0.2.14
+version: 0.2.15
 appVersion: v1.14.0
 icon: https://www.fluentd.org/assets/img/miscellany/fluentd-logo_2x.png
 home: https://www.fluentd.org/
@@ -10,7 +10,5 @@ sources:
   - https://github.com/fluent/fluentd/
   - https://github.com/fluent/fluentd-kubernetes-daemonset
 maintainers:
-  - name: edsiper
-    email: eduardo@treasure-data.com
-  - name: dioguerra
-    email: diogo.filipe.tomas.guerra@cern.ch
+  - name: lukewendling
+    email: luke.wendling+github@skywardfederal.com
