@@ -28,7 +28,7 @@ containers:
   {{- end }}
   {{- if .Values.env }}
     env:
-    {{- toYaml .Values.env | nindent 6 }}
+    {{- include "common.tplvalues.render" (dict "value" .Values.env "context" $) | nindent 6 }}
   {{- end }}
   {{- if .Values.envFrom }}
     envFrom:
