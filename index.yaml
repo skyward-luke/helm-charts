@@ -1830,6 +1830,27 @@ entries:
   fluentd:
   - apiVersion: v2
     appVersion: v1.14.0
+    created: "2022-05-04T16:39:45.993892583Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: A Helm chart for fluentd
+    digest: 472117c7f87cfc5aa03168f00762c479feafd42bc03b0643ed18f880141c053c
+    home: https://www.fluentd.org/
+    icon: https://www.fluentd.org/assets/img/miscellany/fluentd-logo_2x.png
+    maintainers:
+    - email: luke.wendling+github@skywardfederal.com
+      name: lukewendling
+    name: fluentd
+    sources:
+    - https://github.com/fluent/fluentd/
+    - https://github.com/fluent/fluentd-kubernetes-daemonset
+    urls:
+    - https://github.com/skyward-luke/helm-charts/releases/download/fluentd-0.2.16/fluentd-0.2.16.tgz
+    version: 0.2.16
+  - apiVersion: v2
+    appVersion: v1.14.0
     created: "2021-10-13T14:53:28.603608377Z"
     description: A Helm chart for fluent
     digest: e3d03b81d8bd51a7a345cd61d71ca15df53497f8c4411c4a3cfec3d9711a6c1a
@@ -2104,4 +2125,4 @@ entries:
     urls:
     - https://github.com/fluent/helm-charts/releases/download/fluentd-0.1.0/fluentd-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-13T14:53:28.604266983Z"
+generated: "2022-05-04T16:39:45.994520485Z"
